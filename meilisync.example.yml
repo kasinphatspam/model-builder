@@ -1,0 +1,24 @@
+debug: true
+plugins:
+  - meilisync.plugin.Plugin
+progress:
+  type: file
+source:
+  type: mongo
+  host: 
+  username: 
+  password: 
+  database: 
+meilisearch:
+  api_url: http://meilisearch:7700
+  api_key: 
+  insert_size: 100
+  insert_interval: 10
+sync:
+  - table: 
+    index: 
+    pk: _id
+    full: true
+sentry:
+  dsn: ""
+  environment: "production"

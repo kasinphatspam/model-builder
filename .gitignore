@@ -1,0 +1,8 @@
+rabbitmq/
+redis/
+meilisearch/
+meilisync/
+meilisync.yml
+backend/authentication/tmp/
+.env
+**/.DS_Store
