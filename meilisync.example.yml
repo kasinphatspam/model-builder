@@ -12,7 +12,7 @@ source:
 meilisearch:
   api_url: http://meilisearch:7700
   api_key: 
-  insert_size: 100
+  insert_size: 1000
   insert_interval: 10
 sync:
   - table: 
