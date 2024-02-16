@@ -1,5 +1,6 @@
 data/
-meilisync.yml
+config/meilisync.yml
+config/progress.json
 backend/authentication/tmp/
 .env
 **/.DS_Store

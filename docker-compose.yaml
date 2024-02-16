@@ -72,6 +72,6 @@ services:
     restart: always
     volumes:
       - ./config/meilisync.yml:/meilisync/config.yml
-      - ./config/meilisync.progress.json:/meilisync/progress.json
+      - ./config/progress.json:/meilisync/progress.json
     depends_on:
       - meilisearch
