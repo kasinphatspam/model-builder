@@ -1,7 +1,4 @@
-rabbitmq/
-redis/
-meilisearch/
-meilisync/
+data/
 meilisync.yml
 backend/authentication/tmp/
 .env

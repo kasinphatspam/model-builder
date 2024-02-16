@@ -21,8 +21,8 @@ services:
     ports:
       - "6379:6379"
     volumes:
-      - ./redis:/usr/local/etc/redis/
-      - ./redis.conf:/usr/local/etc/redis.conf
+      - ./data/redis:/usr/local/etc/redis/
+      - ./config/redis.conf:/usr/local/etc/redis.conf
     environment:
       - REDIS_PASSWORD=${REDIS_PASSWORD:-admin1234}
       - REDIS_PORT=${REDIS_PORT:-6379}
@@ -37,15 +37,15 @@ services:
       - 5672:5672
       - 15672:15672
     volumes:
-      - ./rabbitmq/data/:/var/lib/rabbitmq/
-      - ./rabbitmq/log/:/var/log/rabbitmq
+      - ./data/rabbitmq/data/:/var/lib/rabbitmq/
+      - ./data/rabbitmq/log/:/var/log/rabbitmq
 
   meilisearch:
     image: getmeili/meilisearch:latest
     container_name: "meilisearch"
     restart: always
     volumes:
-      - ./meilisearch/data.ms:/data.ms
+      - ./data/meilisearch/data.ms:/data.ms
     ports:
       - "7700:7700"
     environment:
@@ -71,7 +71,7 @@ services:
     image: long2ice/meilisync
     restart: always
     volumes:
-      - ./meilisync.yml:/meilisync/config.yml
-      - ./meilisync/progress.json:/meilisync/progress.json
+      - ./config/meilisync.yml:/meilisync/config.yml
+      - ./config/meilisync.progress.json:/meilisync/progress.json
     depends_on:
       - meilisearch
